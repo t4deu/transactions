@@ -2,8 +2,14 @@
 ; We fork some components by platform
 .*/*[.]android.js
 
+; Ignore RN metro
+<PROJECT_ROOT>/node_modules/metro/.*
+
+; Ignore RN Libraries
+<PROJECT_ROOT>/node_modules/react-native/.*
+
 ; Ignore templates for 'react-native init'
-<PROJECT_ROOT>/node_modules/react-native/local-cli/templates/.*
+<PROJECT_ROOT>/node_modules/react-native/local-cli/.*
 
 ; Ignore RN jest
 <PROJECT_ROOT>/node_modules/react-native/jest/.*
