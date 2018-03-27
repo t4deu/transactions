@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem> renders without issues 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderLeftWidth": 2,
+          "borderRightWidth": 0,
+          "flex": 1,
+          "flexDirection": "column",
+          "marginLeft": 20,
+          "paddingLeft": 25,
+        },
+        Object {
+          "borderColor": "#3c2b3e",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "paddingBottom": 10,
+          "paddingTop": 4,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 12,
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Crédito
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              }
+            }
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#858585",
+                  "textAlign": "right",
+                }
+              }
+            >
+              10:30
+            </Text>
+          </View>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "marginTop": 10,
+            }
+          }
+        >
+          he Beginner Archery and Beginner Crossbow
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          R$ 
+          10.00
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#aaa",
+          "height": 1,
+          "marginBottom": 10,
+          "marginTop": 10,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 10,
+        "justifyContent": "center",
+        "left": 8,
+        "position": "absolute",
+      }
+    }
+  >
+    <Icon
+      allowFontScaling={false}
+      color="#9bd533"
+      name="ios-checkmark-circle"
+      size={32}
+    />
+  </View>
+</View>
+`;

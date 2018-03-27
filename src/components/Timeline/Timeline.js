@@ -1,14 +1,29 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { FlatList } from 'react-native';
 
-export default class Timeline extends React.Component {
+import ListItem from './ListItem/ListItem';
+import type { Transactions } from '../../state/transactions/types';
+
+import styles from './Timeline.styles';
+
+type Props = {
+  transactions: Transactions,
+};
+
+export default class Timeline extends Component<Props> {
+  renderItem = ({ item, index }) => (
+    <ListItem transaction={item} last={index === this.props.transactions.length - 1} />
+  );
+
   render() {
     return (
-      <View>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <FlatList
+        styles={styles.list}
+        data={this.props.transactions}
+        renderItem={this.renderItem}
+        keyExtractor={item => item.id}
+        getItemLayout={this.itemLayout}
+      />
     );
   }
 }
