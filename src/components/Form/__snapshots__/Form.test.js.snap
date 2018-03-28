@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form> renders without issues 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Toolbar
+    centerElement="Crédito"
+    hidden={false}
+    isSearchActive={false}
+    leftElement="arrow-back"
+    onLeftElementPress={null}
+    onPress={null}
+    onRightElementPress={null}
+    rightElement={
+      <Button
+        accent={false}
+        disabled={false}
+        icon={null}
+        onLongPress={null}
+        onPress={null}
+        primary={false}
+        raised={false}
+        style={
+          Object {
+            "text": Object {
+              "color": "white",
+            },
+          }
+        }
+        text="Adicionar"
+        upperCase={true}
+      />
+    }
+    searchable={null}
+    size={24}
+    style={Object {}}
+  />
+  <Subheader
+    inset={false}
+    lines={1}
+    style={Object {}}
+    text="Quarta-feira, 28 de março"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <TextField
+      activeLineWidth={2}
+      animationDuration={225}
+      autoCapitalize="sentences"
+      baseColor="rgba(0, 0, 0, .38)"
+      disableFullscreenUI={true}
+      disabled={false}
+      disabledLineType="dotted"
+      disabledLineWidth={1}
+      editable={true}
+      errorColor="rgb(213, 0, 0)"
+      fontSize={16}
+      inputContainerPadding={8}
+      label="Valor"
+      labelFontSize={12}
+      labelHeight={32}
+      labelPadding={4}
+      lineWidth={0.5}
+      onChangeText={[Function]}
+      textColor="rgba(0, 0, 0, .87)"
+      tintColor="rgb(0, 145, 234)"
+      titleFontSize={12}
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <TextField
+      activeLineWidth={2}
+      animationDuration={225}
+      autoCapitalize="sentences"
+      baseColor="rgba(0, 0, 0, .38)"
+      disableFullscreenUI={true}
+      disabled={false}
+      disabledLineType="dotted"
+      disabledLineWidth={1}
+      editable={true}
+      errorColor="rgb(213, 0, 0)"
+      fontSize={16}
+      inputContainerPadding={8}
+      label="Descrição"
+      labelFontSize={12}
+      labelHeight={32}
+      labelPadding={4}
+      lineWidth={0.5}
+      onChangeText={[Function]}
+      textColor="rgba(0, 0, 0, .87)"
+      tintColor="rgb(0, 145, 234)"
+      titleFontSize={12}
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <Button
+    accent={false}
+    disabled={false}
+    icon="done"
+    onLongPress={null}
+    onPress={null}
+    primary={true}
+    raised={true}
+    style={Object {}}
+    text="Adicionar"
+    upperCase={true}
+  />
+</View>
+`;

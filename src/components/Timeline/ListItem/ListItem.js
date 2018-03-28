@@ -1,9 +1,10 @@
+// @flow
 import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import currency from 'currency.js';
 
-import type { Transaction } from '../../../state/transactions/types';
+import type { Transaction } from '../../../state/ducks/transactions/types';
 
 import styles from './ListItem.styles';
 
@@ -12,7 +13,7 @@ type Props = {
 };
 
 export default class ListItem extends PureComponent<Props> {
-  renderTime(transaction) {
+  renderTime(transaction:Transaction) {
     return (
       <View style={styles.timeWrapper}>
         <Text style={styles.time}>{transaction.createdAt}</Text>
@@ -20,7 +21,7 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderDetails(transaction) {
+  renderDetails(transaction:Transaction) {
     const detailStyle = this.props.last ? styles.lastDetail : styles.defaultDetail;
 
     return (
@@ -31,7 +32,7 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderDescription(transaction) {
+  renderDescription(transaction:Transaction) {
     return (
       <View>
         {this.renderHeader(transaction)}
@@ -41,7 +42,7 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderHeader(transaction) {
+  renderHeader(transaction:Transaction) {
     const title = transaction.type === 'credit' ? 'Crédito' : 'Débito';
     return (
       <View style={styles.header}>
@@ -53,7 +54,7 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderCircle(transaction) {
+  renderCircle(transaction:Transaction) {
     return transaction.type === 'credit' ? (
       <View style={styles.circle}>
         <Ionicons name="ios-checkmark-circle" size={32} color="#9bd533" />

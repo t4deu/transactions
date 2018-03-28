@@ -1,15 +1,16 @@
 /* eslint-disable global-require */
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import { getStorybookUI, configure } from '@storybook/react-native';
+import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 
-// import stories
+import MaterialTheme from './MaterialTheme';
+
+addDecorator(story => <MaterialTheme>{story()}</MaterialTheme>);
+
 configure(() => {
   require('./stories');
 }, module);
 
-// This assumes that storybook is running on the same host as your RN packager,
-// to set manually use, e.g. host: 'localhost' option
 const StorybookUIRoot = getStorybookUI({ port: 7007, onDeviceUI: true });
 
 // react-native hot module loader must take in a Class - https://github.com/facebook/react-native/issues/10991

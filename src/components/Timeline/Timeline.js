@@ -1,8 +1,9 @@
+// @flow
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 
 import ListItem from './ListItem/ListItem';
-import type { Transactions } from '../../state/transactions/types';
+import type { Transactions, Transaction } from '../../state/ducks/transactions/types';
 
 import styles from './Timeline.styles';
 
@@ -11,7 +12,9 @@ type Props = {
 };
 
 export default class Timeline extends Component<Props> {
-  renderItem = ({ item, index }) => (
+  // BUG eslint-plugin-react/#1002
+  // eslint-disable-next-line
+  renderItem = ({ item, index }: {item: Transaction, index: number}) => (
     <ListItem transaction={item} last={index === this.props.transactions.length - 1} />
   );
 
@@ -22,7 +25,6 @@ export default class Timeline extends Component<Props> {
         data={this.props.transactions}
         renderItem={this.renderItem}
         keyExtractor={item => item.id}
-        getItemLayout={this.itemLayout}
       />
     );
   }
