@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Controls> renders without issues 1`] = `
+<ActionButton
+  actions={
+    Array [
+      Object {
+        "icon": "remove",
+        "label": "Débito",
+        "name": "remove",
+      },
+      Object {
+        "icon": "add",
+        "label": "Crédito",
+        "name": "add",
+      },
+    ]
+  }
+  hidden={false}
+  icon="add"
+  onLongPress={null}
+  onPress={[Function]}
+  rippleColor={null}
+  style={Object {}}
+  transition="toolbar"
+/>
+`;
