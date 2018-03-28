@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FirstTransaction> renders without issues 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+      "height": 200,
+      "marginTop": 60,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <Card
+    onPress={null}
+    style={Object {}}
+  >
+    <View
+      style={
+        Object {
+          "padding": 20,
+          "paddingBottom": 30,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 28,
+            "marginBottom": 50,
+            "textAlign": "center",
+          }
+        }
+      >
+        Seja Bem Vindo!
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 16,
+            "marginBottom": 50,
+            "textAlign": "center",
+          }
+        }
+      >
+        Toque neste botão aqui para adicionar nossa primeira transação
+      </Text>
+      <Button
+        accent={false}
+        disabled={false}
+        icon="add"
+        onLongPress={null}
+        onPress={[Function]}
+        primary={true}
+        raised={true}
+        style={Object {}}
+        text="Adicionar Renda"
+        upperCase={true}
+      />
+    </View>
+  </Card>
+</View>
+`;
