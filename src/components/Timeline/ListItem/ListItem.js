@@ -10,6 +10,7 @@ import styles from './ListItem.styles';
 
 type Props = {
   transaction: Transaction,
+  last: boolean,
 };
 
 export default class ListItem extends PureComponent<Props> {
@@ -27,7 +28,7 @@ export default class ListItem extends PureComponent<Props> {
     return (
       <View style={[styles.details, detailStyle]}>
         <View style={styles.detail}>{this.renderDescription(transaction)}</View>
-        <View style={styles.separator} />
+        { !this.props.last && <View style={styles.separator} /> }
       </View>
     );
   }

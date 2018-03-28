@@ -28,7 +28,7 @@ storiesOf('Timeline item', module)
   ))
   .add('is last item', () => (
     <ListItem
-      last={true}
+      last
       transaction={{
         id: 1,
         type: 'credit',

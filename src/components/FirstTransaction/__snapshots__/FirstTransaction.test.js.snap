@@ -6,9 +6,8 @@ exports[`<FirstTransaction> renders without issues 1`] = `
     Object {
       "backgroundColor": "#fafafa",
       "flex": 1,
-      "height": 200,
-      "marginTop": 60,
-      "paddingVertical": 20,
+      "paddingBottom": 20,
+      "paddingTop": 80,
     }
   }
 >

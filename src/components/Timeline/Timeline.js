@@ -1,13 +1,15 @@
 // @flow
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
+import type { Children } from 'react';
+import type { Transactions, Transaction } from '../../state/Ducks/Transactions/Types';
 
 import ListItem from './ListItem/ListItem';
-import type { Transactions, Transaction } from '../../state/ducks/transactions/types';
 
 import styles from './Timeline.styles';
 
 type Props = {
+  header: Children,
   transactions: Transactions,
 };
 
@@ -21,10 +23,11 @@ export default class Timeline extends Component<Props> {
   render() {
     return (
       <FlatList
-        styles={styles.list}
+        style={[styles.list]}
         data={this.props.transactions}
         renderItem={this.renderItem}
         keyExtractor={item => item.id}
+        ListHeaderComponent={this.props.header}
       />
     );
   }

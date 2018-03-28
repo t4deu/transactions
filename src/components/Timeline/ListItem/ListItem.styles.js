@@ -19,6 +19,7 @@ export default {
     borderRightWidth: 0,
     marginLeft: 20,
     paddingLeft: 25,
+    paddingRight: 20,
     borderLeftWidth: 2,
     flexDirection: 'column',
     flex: 1,

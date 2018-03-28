@@ -11,15 +11,13 @@ exports[`<Timeline> renders empty list 1`] = `
   onEndReachedThreshold={2}
   renderItem={[Function]}
   scrollEventThrottle={50}
-  styles={
-    Object {
-      "backgroundColor": "white",
-      "flex": 1,
-      "marginTop": 20,
-      "padding": 20,
-      "paddingLeft": 5,
-      "paddingTop": 65,
-    }
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+      },
+    ]
   }
   updateCellsBatchingPeriod={50}
   windowSize={21}
@@ -55,15 +53,13 @@ exports[`<Timeline> renders with transactions 1`] = `
   onEndReachedThreshold={2}
   renderItem={[Function]}
   scrollEventThrottle={50}
-  styles={
-    Object {
-      "backgroundColor": "white",
-      "flex": 1,
-      "marginTop": 20,
-      "padding": 20,
-      "paddingLeft": 5,
-      "paddingTop": 65,
-    }
+  style={
+    Array [
+      Object {
+        "backgroundColor": "white",
+        "flex": 1,
+      },
+    ]
   }
   updateCellsBatchingPeriod={50}
   windowSize={21}

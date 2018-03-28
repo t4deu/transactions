@@ -1,7 +1,8 @@
 export default {
   painel: {
     flex: 1,
-    padding: 20,
+    paddingVertical: 20,
+    height: 200,
     backgroundColor: '#fafafa',
   },
   card: {
