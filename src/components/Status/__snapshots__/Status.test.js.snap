@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Status> renders without issues for saver 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Card
+    onPress={null}
+    style={Object {}}
+  >
+    <View
+      style={
+        Object {
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      >
+        Você economizou 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#8600c9",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          R$4,000,00
+        </Text>
+         e gastou
+         
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#8600c9",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          R$-200,00
+        </Text>
+        , atualmente você tem:
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#8600c9",
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        R$3,800,00
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        Parabéns! Você sabe usar deu dinheiro
+      </Text>
+    </View>
+  </Card>
+</View>
+`;
+
+exports[`<Status> renders without issues for spender 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fafafa",
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <Card
+    onPress={null}
+    style={Object {}}
+  >
+    <View
+      style={
+        Object {
+          "padding": 20,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 16,
+          }
+        }
+      >
+        Você economizou 
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#8600c9",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          R$-4,000,00
+        </Text>
+         e gastou
+         
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#8600c9",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          R$200,00
+        </Text>
+        , atualmente você tem:
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#8600c9",
+            "fontSize": 18,
+            "fontWeight": "bold",
+            "marginVertical": 5,
+            "textAlign": "center",
+          }
+        }
+      >
+        R$-3,800,00
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontStyle": "italic",
+          }
+        }
+      >
+        Cuidado! Tá bom de começar a dar uma maneirada
+      </Text>
+    </View>
+  </Card>
+</View>
+`;

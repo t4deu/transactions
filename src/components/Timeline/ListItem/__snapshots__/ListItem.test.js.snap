@@ -101,8 +101,7 @@ exports[`<ListItem> renders without issues 1`] = `
             }
           }
         >
-          R$ 
-          10.00
+          R$10,00
         </Text>
       </View>
     </View>

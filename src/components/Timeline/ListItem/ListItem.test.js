@@ -1,6 +1,4 @@
-import 'react-native';
 import React from 'react';
-import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 

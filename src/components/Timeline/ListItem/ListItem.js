@@ -2,8 +2,8 @@
 import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import currency from 'currency.js';
 
+import { toCurrency } from '../../../Utils';
 import type { Transaction } from '../../../state/ducks/transactions/types';
 
 import styles from './ListItem.styles';
@@ -37,7 +37,7 @@ export default class ListItem extends PureComponent<Props> {
       <View>
         {this.renderHeader(transaction)}
         <Text style={styles.description}>{transaction.description}</Text>
-        <Text style={styles.price}>R$ {currency(transaction.amount).format()}</Text>
+        <Text style={styles.price}>{toCurrency(transaction.amount)}</Text>
       </View>
     );
   }
