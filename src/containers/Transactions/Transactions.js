@@ -74,7 +74,6 @@ export class Transactions extends Component<Props, State> {
   };
 
   toogleSortOrder = () => {
-    console.log('toogle');
     if (this.props.sortOrder === 'DESC') {
       this.props.setSortOrder('ASC');
     } else {

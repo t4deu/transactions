@@ -63,7 +63,7 @@ exports[`<Status> renders without issues for saver 1`] = `
         >
           R$ -200,00
         </Text>
-        , atualmente você tem:
+        . Atualmente você tem:
       </Text>
       <Text
         accessible={true}
@@ -161,7 +161,7 @@ exports[`<Status> renders without issues for spender 1`] = `
         >
           R$ 200,00
         </Text>
-        , atualmente você tem:
+        . Atualmente você tem:
       </Text>
       <Text
         accessible={true}

@@ -58,7 +58,9 @@ export class Form extends Component<Props> {
             centerElement={I18n(type)}
             leftElement="arrow-back"
             onLeftElementPress={this.goBack}
-            rightElement={<Button text="Adicionar" style={{ text: { color: 'white' } }} />}
+            rightElement={
+              <Button text="Adicionar" onPress={submitForm} style={{ text: { color: 'white' } }} />
+            }
           />
           <View style={styles.content}>
             <Subheader text={today()} />

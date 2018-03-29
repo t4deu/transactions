@@ -25,7 +25,7 @@ const Status = (props: Props) => {
         <View style={styles.card}>
           <Text style={styles.text}>
             Você economizou <Text style={styles.currency}>{toCurrency(creditTotal)}</Text> e gastou{' '}
-            <Text style={styles.currency}>{toCurrency(debitTotal)}</Text>, atualmente você tem:
+            <Text style={styles.currency}>{toCurrency(debitTotal)}</Text>. Atualmente você tem:
           </Text>
           <Text style={styles.total}>{toCurrency(total)}</Text>
           {isSaver && <Text style={styles.advice}>Parabéns! Você sabe usar deu dinheiro</Text>}
