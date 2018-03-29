@@ -1,12 +1,14 @@
 export default {
   painel: {
     flex: 1,
-    paddingVertical: 20,
+    paddingTop: 20,
+    marginBottom: 20,
     height: 200,
     backgroundColor: '#fafafa',
   },
   card: {
-    padding: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 30,
   },
   text: {
     fontSize: 16,

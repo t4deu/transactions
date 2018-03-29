@@ -1,141 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Form> renders without issues 1`] = `
-<Component
-  animationType="slide"
-  hardwareAccelerated={false}
-  onRequestClose={[Function]}
-  onShow={[Function]}
-  presentationStyle="fullScreen"
-  transparent={false}
-  visible={true}
->
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
+<Formik
+  enableReinitialize={false}
+  handleSubmit={[Function]}
+  initialValues={
+    Object {
+      "amount": "",
+      "description": "",
     }
-  >
-    <Toolbar
-      centerElement={null}
-      hidden={false}
-      isSearchActive={false}
-      leftElement="arrow-back"
-      onLeftElementPress={[Function]}
-      onPress={null}
-      onRightElementPress={null}
-      rightElement={
-        <Button
-          accent={false}
-          disabled={false}
-          icon={null}
-          onLongPress={null}
-          onPress={null}
-          primary={false}
-          raised={false}
-          style={
-            Object {
-              "text": Object {
-                "color": "white",
-              },
-            }
-          }
-          text="Adicionar"
-          upperCase={true}
-        />
-      }
-      searchable={null}
-      size={24}
-      style={Object {}}
-    />
-    <View
-      style={
-        Object {
-          "flex": 1,
-          "padding": 20,
-        }
-      }
-    >
-      <Subheader
-        inset={false}
-        lines={1}
-        style={Object {}}
-        text="Quinta-feira, 29 de março"
-      />
-      <View
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
-      >
-        <TextField
-          activeLineWidth={2}
-          animationDuration={225}
-          autoCapitalize="sentences"
-          baseColor="rgba(0, 0, 0, .38)"
-          disableFullscreenUI={true}
-          disabled={false}
-          disabledLineType="dotted"
-          disabledLineWidth={1}
-          editable={true}
-          errorColor="rgb(213, 0, 0)"
-          fontSize={16}
-          inputContainerPadding={8}
-          keyboardType="numeric"
-          label="Valor"
-          labelFontSize={12}
-          labelHeight={32}
-          labelPadding={4}
-          lineWidth={0.5}
-          onChangeText={[Function]}
-          textColor="rgba(0, 0, 0, .87)"
-          tintColor="rgb(0, 145, 234)"
-          titleFontSize={12}
-          underlineColorAndroid="transparent"
-          value=""
-        />
-        <TextField
-          activeLineWidth={2}
-          animationDuration={225}
-          autoCapitalize="sentences"
-          baseColor="rgba(0, 0, 0, .38)"
-          disableFullscreenUI={true}
-          disabled={false}
-          disabledLineType="dotted"
-          disabledLineWidth={1}
-          editable={true}
-          errorColor="rgb(213, 0, 0)"
-          fontSize={16}
-          inputContainerPadding={8}
-          label="Descrição"
-          labelFontSize={12}
-          labelHeight={32}
-          labelPadding={4}
-          lineWidth={0.5}
-          maxLength={60}
-          onChangeText={[Function]}
-          textColor="rgba(0, 0, 0, .87)"
-          tintColor="rgb(0, 145, 234)"
-          titleFontSize={12}
-          underlineColorAndroid="transparent"
-          value=""
-        />
-      </View>
-    </View>
-    <Button
-      accent={false}
-      disabled={false}
-      icon="done"
-      onLongPress={null}
-      onPress={[Function]}
-      primary={true}
-      raised={true}
-      style={Object {}}
-      text="Adicionar"
-      upperCase={true}
-    />
-  </View>
-</Component>
+  }
+  isInitialValid={false}
+  onBack={[Function]}
+  onSubmit={[Function]}
+  render={[Function]}
+  title="Crédito"
+  validateOnBlur={true}
+  validateOnChange={true}
+  validationSchema={[Function]}
+/>
 `;

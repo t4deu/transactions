@@ -33,6 +33,7 @@ type Props = {
   currentStatus: CurrentStatus,
   hasTransactions: boolean,
   addTransaction: Function,
+  setSortOrder: Function,
   sortOrder: SortOrder,
 };
 
@@ -72,6 +73,15 @@ export class Transactions extends Component<Props, State> {
     });
   };
 
+  toogleSortOrder = () => {
+    console.log('toogle');
+    if (this.props.sortOrder === 'DESC') {
+      this.props.setSortOrder('ASC');
+    } else {
+      this.props.setSortOrder('DESC');
+    }
+  }
+
   tollbarAction() {
     if (!this.props.hasTransactions) {
       return {};
@@ -106,7 +116,12 @@ export class Transactions extends Component<Props, State> {
   render() {
     return (
       <View style={styles.container}>
-        <Toolbar centerElement="Transações" rightElement={this.tollbarAction()} />
+        <View style={styles.bar} />
+        <Toolbar
+          centerElement="Transações"
+          rightElement={this.tollbarAction()}
+          onRightElementPress={this.toogleSortOrder}
+        />
         {this.renderContent()}
         <TransactionForm
           type={this.state.formType}

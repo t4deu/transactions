@@ -10,7 +10,9 @@ import { Store } from './state/Ducks/Transactions/Types';
 import SortedTransactions from './containers/Transactions/Transactions';
 
 const reduxStore: Store = configureStore();
-const uiTheme = {};
+const uiTheme = {
+  fontFamily: 'System',
+};
 
 export default class Entry extends React.Component {
   render() {

@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Transactions> renders multiple transactions 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1e88e5",
+        "height": 24,
+      }
+    }
+  />
+  <Toolbar
+    centerElement="Transações"
+    hidden={false}
+    isSearchActive={false}
+    leftElement={null}
+    onLeftElementPress={null}
+    onPress={null}
+    onRightElementPress={[Function]}
+    rightElement={
+      Object {
+        "actions": Array [
+          "file-upload",
+        ],
+      }
+    }
+    searchable={null}
+    size={24}
+    style={Object {}}
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Timeline
+      header={
+        <Status
+          currentStatus={
+            Object {
+              "creditTotal": 4000,
+              "debitTotal": -200,
+              "isSaver": true,
+              "total": 3800,
+            }
+          }
+        />
+      }
+      transactions={
+        Array [
+          Object {
+            "amount": 10.5,
+            "createdAt": "2018-03-20",
+            "description": "Depósito poupança",
+            "id": 1,
+            "type": "credit",
+          },
+          Object {
+            "amount": -60,
+            "createdAt": "2018-03-20",
+            "description": "Confraria da Pizza",
+            "id": 2,
+            "type": "debit",
+          },
+        ]
+      }
+    />
+    <Controls
+      onAddCredit={[Function]}
+      onAddDebit={[Function]}
+    />
+  </View>
+  <C
+    active={false}
+    onBack={[Function]}
+    onSubmit={[Function]}
+    type="credit"
+  />
+</View>
+`;
+
+exports[`<Transactions> renders single transaction 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1e88e5",
+        "height": 24,
+      }
+    }
+  />
+  <Toolbar
+    centerElement="Transações"
+    hidden={false}
+    isSearchActive={false}
+    leftElement={null}
+    onLeftElementPress={null}
+    onPress={null}
+    onRightElementPress={[Function]}
+    rightElement={
+      Object {
+        "actions": Array [
+          "file-upload",
+        ],
+      }
+    }
+    searchable={null}
+    size={24}
+    style={Object {}}
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Timeline
+      header={
+        <Status
+          currentStatus={
+            Object {
+              "creditTotal": 4000,
+              "debitTotal": -200,
+              "isSaver": true,
+              "total": 3800,
+            }
+          }
+        />
+      }
+      transactions={
+        Array [
+          Object {
+            "amount": 10.5,
+            "createdAt": "2018-03-20",
+            "description": "Depósito poupança",
+            "id": 1,
+            "type": "credit",
+          },
+        ]
+      }
+    />
+    <Controls
+      onAddCredit={[Function]}
+      onAddDebit={[Function]}
+    />
+  </View>
+  <C
+    active={false}
+    onBack={[Function]}
+    onSubmit={[Function]}
+    type="credit"
+  />
+</View>
+`;
+
+exports[`<Transactions> renders without transactions 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#1e88e5",
+        "height": 24,
+      }
+    }
+  />
+  <Toolbar
+    centerElement="Transações"
+    hidden={false}
+    isSearchActive={false}
+    leftElement={null}
+    onLeftElementPress={null}
+    onPress={null}
+    onRightElementPress={[Function]}
+    rightElement={Object {}}
+    searchable={null}
+    size={24}
+    style={Object {}}
+  />
+  <FirstTransaction
+    onAddCredit={[Function]}
+    onAddDebit={[Function]}
+  />
+  <C
+    active={false}
+    onBack={[Function]}
+    onSubmit={[Function]}
+    type="credit"
+  />
+</View>
+`;

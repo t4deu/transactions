@@ -5,6 +5,7 @@ import currency from 'currency.js';
 moment.locale('pt-BR');
 const currentSettings = {
   decimal: ',',
+  separator: '.',
   symbol: 'R$ ',
   formatWithSymbol: true,
 };
