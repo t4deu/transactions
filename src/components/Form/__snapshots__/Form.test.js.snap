@@ -5,6 +5,7 @@ exports[`<Form> renders without issues 1`] = `
   animationType="slide"
   hardwareAccelerated={false}
   onRequestClose={[Function]}
+  onShow={[Function]}
   presentationStyle="fullScreen"
   transparent={false}
   visible={true}

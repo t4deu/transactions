@@ -22,7 +22,7 @@ import {
 // containers & components
 import Controls from '../../components/Controls/Controls';
 import FirstTransaction from '../../components/FirstTransaction/FirstTransaction';
-import Form from '../../components/Form/Form';
+import TransactionForm from '../../components/Form/Form';
 import Status from '../../components/Status/Status';
 import Timeline from '../../components/Timeline/Timeline';
 // styles
@@ -108,7 +108,7 @@ export class Transactions extends Component<Props, State> {
       <View style={styles.container}>
         <Toolbar centerElement="Transações" rightElement={this.tollbarAction()} />
         {this.renderContent()}
-        <Form
+        <TransactionForm
           type={this.state.formType}
           active={this.state.formActive}
           onBack={this.closeForm}

@@ -56,12 +56,14 @@
   "dependencies": {
     "currency.js": "^1.1.0",
     "expo": "^25.0.0",
+    "formik": "^0.11.11",
     "moment": "^2.21.0",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-material-textfield": "^0.12.0",
     "react-native-material-ui": "^1.22.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "yup": "^0.24.1"
   }
 }
