@@ -54,7 +54,7 @@ describe('Transactions Reducers', () => {
   it('handles ADD_TRANSACTION for debits', () => {
     const newTransaction = {
       type: 'debit',
-      amount: 10,
+      amount: '10,5',
       description: 'Some Description',
     };
     const currentState = {
@@ -69,7 +69,7 @@ describe('Transactions Reducers', () => {
           ...newTransaction,
           id: 0,
           createdAt: currentTime(),
-          amount: -10,
+          amount: -10.5,
         },
       ],
     };

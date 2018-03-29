@@ -18,7 +18,7 @@ export type Transaction = {
 
 export type TransactionPayload = {
   +type: TransactionType,
-  +amount: number,
+  +amount: string,
   +description: string,
 };
 

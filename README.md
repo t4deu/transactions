@@ -10,6 +10,9 @@ The state is structured following the [re-ducks](https://github.com/alexnm/re-du
 
 Runs the app in development mode.
 
+To run in production mode you can use the Expo XDE, and disable the development mode,
+[check here for instructions](https://docs.expo.io/versions/latest/guides/development-mode.html)
+
 Open it in the [Expo app](https://expo.io) on your phone to view it.
 
 ### `npm storybook`

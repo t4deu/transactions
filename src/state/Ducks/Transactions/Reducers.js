@@ -1,7 +1,7 @@
 // @flow
 import { combineReducers } from 'redux';
 
-import { nextId, currentTime } from './Utils';
+import { nextId, currentTime, parseNumber } from './Utils';
 
 import { ADD_TRANSACTION, SET_SORT_ORDER } from './Types';
 import type { Transactions, Transaction, Action, SortOrder } from './Types';
@@ -14,7 +14,8 @@ transactionsState {
 
 function createTransaction(state: Transactions, action): Transaction {
   const { type, amount, description } = action.payload;
-  const signedAmount = type === 'debit' ? -Math.abs(amount) : amount;
+  const validAmount = parseNumber(amount);
+  const signedAmount = type === 'debit' ? -validAmount : validAmount;
 
   return {
     id: nextId(state),
