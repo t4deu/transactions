@@ -14,14 +14,12 @@ const uiTheme = {
   fontFamily: 'System',
 };
 
-export default class Entry extends React.Component {
-  render() {
-    return (
-      <ReduxProvider store={reduxStore}>
-        <ThemeProvider uiTheme={uiTheme}>
-          <SortedTransactions />
-        </ThemeProvider>
-      </ReduxProvider>
-    );
-  }
-}
+const Entry = () => (
+  <ReduxProvider store={reduxStore}>
+    <ThemeProvider uiTheme={uiTheme}>
+      <SortedTransactions />
+    </ThemeProvider>
+  </ReduxProvider>
+);
+
+export default Entry;

@@ -33,7 +33,6 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"src/**/*.js\"",
     "test": "jest",
     "test:watch": "jest --watch",
     "flow": "flow",
@@ -64,6 +63,7 @@
     "react-native-material-ui": "^1.22.0",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "redux-persist": "^5.9.1",
     "yup": "^0.24.1"
   }
 }
