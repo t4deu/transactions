@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
-import Form from './Form';
+import TransactionForm from './Form';
 
 describe('<Form>', () => {
   it('renders without issues', () => {
-    const component = shallow(<Form title="Crédito" onBack={() => {}} onSubmit={() => {}} />);
+    const component = shallow(<TransactionForm title="Crédito" onBack={() => {}} onSubmit={() => {}} />);
 
     expect(toJson(component)).toMatchSnapshot();
   });

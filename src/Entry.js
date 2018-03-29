@@ -5,7 +5,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import { ThemeProvider } from 'react-native-material-ui';
 // store & types
 import configureStore from './state/Store';
-import { Store } from './state/Ducks/Transactions/Types';
+import type { Store } from './state/Ducks/Transactions/Types';
 // containers & components
 import SortedTransactions from './containers/Transactions/Transactions';
 

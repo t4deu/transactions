@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 // types
-import type { Transaction } from '../../../state/ducks/transactions/types';
+import type { Transaction } from '../../../state/Ducks/Transactions/Types';
 // containers & components
 import { toCurrency, humanDate } from '../../../Utils';
 // styles

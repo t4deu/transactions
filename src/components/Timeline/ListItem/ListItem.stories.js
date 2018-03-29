@@ -37,4 +37,4 @@ storiesOf('Timeline item', module)
         createdAt: '2018-03-20',
       }}
     />
-  ));;
+  ));

@@ -1,13 +1,15 @@
 // @flow
-import React, { Children } from 'react';
+import React from 'react';
 
 import { ThemeProvider } from 'react-native-material-ui';
 
 type Props = {
-  children: Children,
+  children: any,
 };
 
-const uiTheme = {};
+const uiTheme = {
+  fontFamily: 'System',
+};
 
 const Main = (props: Props) => <ThemeProvider uiTheme={uiTheme}>{props.children}</ThemeProvider>;
 

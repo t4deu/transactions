@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 // types
-import type { Children } from 'react';
 import type { Transactions, Transaction } from '../../state/Ducks/Transactions/Types';
 // containers & components
 import ListItem from './ListItem/ListItem';
@@ -11,7 +10,7 @@ import ListItem from './ListItem/ListItem';
 import styles from './Timeline.styles';
 
 type Props = {
-  header: Children,
+  header: any,
   transactions: Transactions,
 };
 
