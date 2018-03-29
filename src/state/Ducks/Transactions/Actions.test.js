@@ -16,7 +16,7 @@ describe('Transactions Actions', () => {
         payload: params,
       };
 
-      expect(addTransaction('credit', 10, 'Some Description')).toEqual(expectedAction);
+      expect(addTransaction(params)).toEqual(expectedAction);
     });
   });
 

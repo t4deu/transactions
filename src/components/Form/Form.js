@@ -1,17 +1,21 @@
 // @flow
+// external imports
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Modal } from 'react-native';
 import { Toolbar, Button, Subheader } from 'react-native-material-ui';
 import { TextField } from 'react-native-material-textfield';
-
-import { today } from '../../Utils';
-
+// types
+import type { TransactionType } from '../../state/Ducks/Transactions/Types';
+// containers & components
+import { today, I18n } from '../../Utils';
+// styles
 import styles from './Form.styles';
 
 type Props = {
-  title: string,
+  type: TransactionType,
   onSubmit: Function,
   onBack: Function,
+  active: boolean,
 };
 
 type State = {
@@ -19,23 +23,34 @@ type State = {
   description: string,
 };
 
-export default class Form extends Component<Props, State> {
-  state = {
-    amount: '',
-    description: '',
-  };
+const initialState = {
+  amount: '',
+  description: '',
+};
 
-  handleAmountChange = (amount: string) => {
+export default class Form extends Component<Props, State> {
+  state = initialState;
+
+  onAmountChange = (amount: string) => {
     this.setState({ amount });
   };
 
-  handleSubmit = () => {
+  onDescriptionChange = (description: string) => {
+    this.setState({ description });
+  };
+
+  onSubmit = () => {
     const { amount, description } = this.state;
 
     this.props.onSubmit({
+      type: this.props.type,
       amount: parseFloat(amount),
       description,
     });
+  };
+
+  refreshState = () => {
+    this.setState(initialState);
   };
 
   goBack = () => {
@@ -44,31 +59,43 @@ export default class Form extends Component<Props, State> {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Toolbar
-          centerElement={this.props.title}
-          leftElement="arrow-back"
-          onLeftElementPress={this.goBack()}
-          rightElement={<Button text="Adicionar" style={{ text: { color: 'white' } }} />}
-        />
-        <Subheader text={today()} />
-
-        <View style={styles.form}>
-          <TextField
-            label="Valor"
-            value={this.state.amount}
-            onChangeText={this.handleAmountChange}
+      <Modal
+        animationType="slide"
+        transparent={false}
+        presentationStyle="fullScreen"
+        visible={this.props.active}
+        onRequestClose={this.goBack}
+        onShow={this.refreshState}
+      >
+        <View style={styles.container}>
+          <Toolbar
+            centerElement={I18n(this.props.type)}
+            leftElement="arrow-back"
+            onLeftElementPress={this.goBack}
+            rightElement={<Button text="Adicionar" style={{ text: { color: 'white' } }} />}
           />
+          <View style={styles.content}>
+            <Subheader text={today()} />
 
-          <TextField
-            label="Descrição"
-            value={`${this.state.description}`}
-            onChangeText={amount => this.setState({ amount })}
-          />
+            <View style={styles.form}>
+              <TextField
+                label="Valor"
+                keyboardType="numeric"
+                value={this.state.amount}
+                onChangeText={this.onAmountChange}
+              />
+
+              <TextField
+                label="Descrição"
+                maxLength={60}
+                value={`${this.state.description}`}
+                onChangeText={this.onDescriptionChange}
+              />
+            </View>
+          </View>
+          <Button onPress={this.onSubmit} raised primary icon="done" text="Adicionar" />
         </View>
-
-        <Button raised primary icon="done" text="Adicionar" />
-      </View>
+      </Modal>
     );
   }
 }

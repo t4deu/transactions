@@ -30,14 +30,14 @@ exports[`<Timeline> renders with transactions 1`] = `
     Array [
       Object {
         "amount": 10,
-        "createdAt": "10:30",
+        "createdAt": "2018-03-20",
         "description": "he Beginner Archery and Beginner Crossbow",
         "id": 1,
         "type": "credit",
       },
       Object {
         "amount": -140,
-        "createdAt": "10:30",
+        "createdAt": "2018-03-20",
         "description": "he Beginner Archery and Beginner Crossbow",
         "id": 5,
         "type": "debit",

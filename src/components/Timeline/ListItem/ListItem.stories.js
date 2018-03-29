@@ -11,7 +11,7 @@ storiesOf('Timeline item', module)
         type: 'credit',
         amount: 10.5,
         description: 'Depósito poupança',
-        createdAt: '10:30',
+        createdAt: '2018-03-20',
       }}
     />
   ))
@@ -22,7 +22,7 @@ storiesOf('Timeline item', module)
         type: 'debit',
         amount: 50.9,
         description: 'Confraria da Pizza',
-        createdAt: '10:30',
+        createdAt: '2018-03-20',
       }}
     />
   ))
@@ -34,7 +34,7 @@ storiesOf('Timeline item', module)
         type: 'credit',
         amount: 10.5,
         description: 'Depósito poupança',
-        createdAt: '10:30',
+        createdAt: '2018-03-20',
       }}
     />
   ));;

@@ -5,5 +5,8 @@ import Form from './Form';
 
 storiesOf('Form', module)
   .add('Add Credit', () => (
-    <Form title="Crédito" onBack={() => {}} onSubmit={() => {}} />
+    <Form type="credit" active onBack={() => {}} onSubmit={() => {}} />
+  ))
+  .add('Add Debit', () => (
+    <Form type="debit" active onBack={() => {}} onSubmit={() => {}} />
   ));

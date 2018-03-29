@@ -1,7 +1,8 @@
 // @flow
+// external imports
 import React, { Component } from 'react';
 import { ActionButton } from 'react-native-material-ui';
-
+// types
 type Props = {
   onAddCredit: Function,
   onAddDebit: Function,

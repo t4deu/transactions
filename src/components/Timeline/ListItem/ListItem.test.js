@@ -11,7 +11,7 @@ describe('<ListItem>', () => {
       type: 'credit',
       amount: 10,
       description: 'he Beginner Archery and Beginner Crossbow',
-      createdAt: '10:30',
+      createdAt: '2018-03-20',
     };
     const component = shallow(<ListItem transaction={transaction} />);
 

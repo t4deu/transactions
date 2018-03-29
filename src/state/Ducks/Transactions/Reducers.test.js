@@ -51,6 +51,36 @@ describe('Transactions Reducers', () => {
     expect(reducer(currentState, action)).toEqual(expectedState);
   });
 
+  it('handles ADD_TRANSACTION for debits', () => {
+    const newTransaction = {
+      type: 'debit',
+      amount: 10,
+      description: 'Some Description',
+    };
+    const currentState = {
+      sortOrder: 'DESC',
+      transactions: [],
+    };
+    const expectedState = {
+      sortOrder: 'DESC',
+      transactions: [
+        ...currentState.transactions,
+        {
+          ...newTransaction,
+          id: 0,
+          createdAt: currentTime(),
+          amount: -10,
+        },
+      ],
+    };
+    const action = {
+      type: ADD_TRANSACTION,
+      payload: newTransaction,
+    };
+
+    expect(reducer(currentState, action)).toEqual(expectedState);
+  });
+
   it('handles SET_SORT_ORDER', () => {
     const currentState = {
       sortOrder: 'DESC',

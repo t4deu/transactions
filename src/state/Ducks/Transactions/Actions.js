@@ -1,18 +1,10 @@
 // @flow
 import { ADD_TRANSACTION, SET_SORT_ORDER } from './Types';
-import type { Action, SortOrder, TransactionType } from './Types';
+import type { Action, SortOrder, TransactionPayload } from './Types';
 
-export const addTransaction = (
-  type: TransactionType,
-  amount: number,
-  description: string,
-): Action => ({
+export const addTransaction = (payload:TransactionPayload): Action => ({
   type: ADD_TRANSACTION,
-  payload: {
-    type,
-    amount,
-    description,
-  },
+  payload,
 });
 
 export const setSortOrder = (sortOrder: SortOrder): Action => ({

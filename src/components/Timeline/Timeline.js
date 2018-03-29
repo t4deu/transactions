@@ -1,11 +1,13 @@
 // @flow
+// external imports
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
+// types
 import type { Children } from 'react';
 import type { Transactions, Transaction } from '../../state/Ducks/Transactions/Types';
-
+// containers & components
 import ListItem from './ListItem/ListItem';
-
+// styles
 import styles from './Timeline.styles';
 
 type Props = {

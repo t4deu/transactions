@@ -1,11 +1,13 @@
 // @flow
+// external imports
 import React, { PureComponent } from 'react';
 import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-
-import { toCurrency } from '../../../Utils';
+// types
 import type { Transaction } from '../../../state/ducks/transactions/types';
-
+// containers & components
+import { toCurrency, humanDate } from '../../../Utils';
+// styles
 import styles from './ListItem.styles';
 
 type Props = {
@@ -49,7 +51,7 @@ export default class ListItem extends PureComponent<Props> {
       <View style={styles.header}>
         <Text style={styles.title}>{title}</Text>
         <View style={styles.timeWrapper}>
-          <Text style={styles.time}>{transaction.createdAt}</Text>
+          <Text style={styles.time}>{humanDate(transaction.createdAt)}</Text>
         </View>
       </View>
     );

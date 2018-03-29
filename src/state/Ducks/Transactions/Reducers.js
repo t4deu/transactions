@@ -14,11 +14,13 @@ transactionsState {
 
 function createTransaction(state: Transactions, action): Transaction {
   const { type, amount, description } = action.payload;
+  const signedAmount = type === 'debit' ? -Math.abs(amount) : amount;
+
   return {
     id: nextId(state),
     createdAt: currentTime(),
+    amount: signedAmount,
     type,
-    amount,
     description,
   };
 }

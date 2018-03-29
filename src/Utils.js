@@ -9,6 +9,15 @@ const currentSettings = {
   formatWithSymbol: true,
 };
 
+const locale = {
+  credit: 'Crédito',
+  debit: 'Débito',
+};
+
+export function I18n(token:string) {
+  return locale[token];
+}
+
 export function today(format: string = 'dddd, DD [de] MMMM'): string {
   return moment().format(format);
 }

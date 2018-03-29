@@ -1,23 +1,25 @@
+// @flow
+// external imports
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider as ReduxProvider } from 'react-redux';
+import { ThemeProvider } from 'react-native-material-ui';
+// store & types
+import configureStore from './state/Store';
+import { Store } from './state/Ducks/Transactions/Types';
+// containers & components
+import SortedTransactions from './containers/Transactions/Transactions';
+
+const reduxStore: Store = configureStore();
+const uiTheme = {};
 
 export default class Entry extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <ReduxProvider store={reduxStore}>
+        <ThemeProvider uiTheme={uiTheme}>
+          <SortedTransactions />
+        </ThemeProvider>
+      </ReduxProvider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

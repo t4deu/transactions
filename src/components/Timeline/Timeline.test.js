@@ -19,14 +19,14 @@ describe('<Timeline>', () => {
             type: 'credit',
             amount: 10,
             description: 'he Beginner Archery and Beginner Crossbow',
-            createdAt: '10:30',
+            createdAt: '2018-03-20',
           },
           {
             id: 5,
             type: 'debit',
             amount: -140,
             description: 'he Beginner Archery and Beginner Crossbow',
-            createdAt: '10:30',
+            createdAt: '2018-03-20',
           },
         ]}
     />);

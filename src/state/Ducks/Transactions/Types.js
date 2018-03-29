@@ -16,6 +16,12 @@ export type Transaction = {
   +createdAt: DateString,
 };
 
+export type TransactionPayload = {
+  +type: TransactionType,
+  +amount: number,
+  +description: string,
+};
+
 export type Status = {
   +total: number,
   +creditTotal: number,
@@ -33,11 +39,7 @@ export type transactionsState = {
 export type Action =
   | {
       type: 'TRANSACTION/ADD_TRANSACTION',
-      payload: {
-        +type: TransactionType,
-        +amount: number,
-        +description: string,
-      },
+      payload: TransactionPayload,
     }
   | { type: 'TRANSACTION/SET_SORT_ORDER', +sort: SortOrder };
 

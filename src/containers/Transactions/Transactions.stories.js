@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react-native';
 
-import Transactions from './Transactions';
+import { Transactions } from './Transactions';
 
 storiesOf('Transactions', module)
   .add('Saver with transactions', () => (
@@ -15,12 +15,12 @@ storiesOf('Transactions', module)
       hasTransactions
       sortOrder="ASC"
       transactions={[
-        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '10:30' },
-        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '13/02/2018' },
-        { id: 3, type: 'credit', amount: 115.90, description: 'Depósito poupança', createdAt: '10:00' },
-        { id: 4, type: 'debit', amount: -13.1, description: 'Confraria da Pizza', createdAt: '09:30' },
-        { id: 5, type: 'debit', amount: -140, description: 'Depósito poupança', createdAt: '10:30' },
-        { id: 6, type: 'credit', amount: 10, description: 'Confraria da Pizza', createdAt: '10:30' },
+        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
+        { id: 3, type: 'credit', amount: 115.90, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 4, type: 'debit', amount: -13.1, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
+        { id: 5, type: 'debit', amount: -140, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 6, type: 'credit', amount: 10, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
       ]}
     />
   ))
@@ -35,7 +35,7 @@ storiesOf('Transactions', module)
       hasTransactions
       sortOrder="ASC"
       transactions={[
-        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '10:30' },
+        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '2018-03-20' },
       ]}
     />
   ))
@@ -50,12 +50,12 @@ storiesOf('Transactions', module)
       hasTransactions
       sortOrder="ASC"
       transactions={[
-        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '10:30' },
-        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '13/02/2018' },
-        { id: 3, type: 'credit', amount: 115.90, description: 'Depósito poupança', createdAt: '10:00' },
-        { id: 4, type: 'debit', amount: -13.1, description: 'Confraria da Pizza', createdAt: '09:30' },
-        { id: 5, type: 'debit', amount: -140, description: 'Depósito poupança', createdAt: '10:30' },
-        { id: 6, type: 'credit', amount: 10, description: 'Confraria da Pizza', createdAt: '10:30' },
+        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
+        { id: 3, type: 'credit', amount: 115.90, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 4, type: 'debit', amount: -13.1, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
+        { id: 5, type: 'debit', amount: -140, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 6, type: 'credit', amount: 10, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
       ]}
     />
   ))
@@ -70,8 +70,8 @@ storiesOf('Transactions', module)
       hasTransactions
       sortOrder="DESC"
       transactions={[
-        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '10:30' },
-        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '13/02/2018' },
+        { id: 1, type: 'credit', amount: 10.50, description: 'Depósito poupança', createdAt: '2018-03-20' },
+        { id: 2, type: 'debit', amount: -60, description: 'Confraria da Pizza', createdAt: '2018-03-20' },
       ]}
     />
   ))

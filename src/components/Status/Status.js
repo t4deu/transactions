@@ -1,11 +1,13 @@
 // @flow
+// external imports
 import React from 'react';
 import { View, Text } from 'react-native';
 import { Card } from 'react-native-material-ui';
-
-import { toCurrency } from '../../Utils';
+// types
 import type { Status as CurrentStatus } from '../../state/Ducks/Transactions/Types';
-
+// containers & components
+import { toCurrency } from '../../Utils';
+// styles
 import styles from './Status.styles';
 
 type Props = {

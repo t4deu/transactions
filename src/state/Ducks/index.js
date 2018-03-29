@@ -1,1 +1,1 @@
-export { default as transactionsState } from './Transactions';
+export { default as transactionsState } from './Transactions/Reducers';

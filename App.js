@@ -5,6 +5,7 @@ import Entry from './src/Entry';
 
 export default class App extends React.Component {
   render() {
-    return __DEV__ ? <StorybookUI /> : <Entry />;
+    return <Entry />;
+    //return __DEV__ ? <StorybookUI /> : <Entry />;
   }
 }
