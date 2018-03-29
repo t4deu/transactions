@@ -14,7 +14,16 @@ export function today(format: string = 'dddd, DD [de] MMMM'): string {
 }
 
 export function humanDate(date: string): string {
-  return moment(date).format();
+  const time = moment(date);
+  const weekAgo = moment().subtract(7, 'days');
+
+  if (time.isSame(moment(), 'day')) {
+    return 'Hoje';
+  } else if (time.isAfter(weekAgo)) {
+    return time.format('DDDD');
+  }
+
+  return time.format('DD/MM/YY');
 }
 
 export function toCurrency(value: number): string {
