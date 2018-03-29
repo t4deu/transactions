@@ -1,7 +1,12 @@
 // @flow
-import type { Transactions, SortOrder } from './Types';
+import currency from 'currency.js';
 
-const getSortedTransactions = (transactions: Transactions, order: SortOrder): Transactions => {
+import type { Transactions, SortOrder, Status } from './Types';
+
+export const getSortedTransactions = (
+  transactions: Transactions,
+  order: SortOrder,
+): Transactions => {
   switch (order) {
     case 'ASC':
       return transactions.sort((a, b) => a.id - b.id);
@@ -12,6 +17,28 @@ const getSortedTransactions = (transactions: Transactions, order: SortOrder): Tr
   }
 };
 
-export default {
-  getSortedTransactions,
+export const getTransactionsStatus = (transactions: Transactions): Status => {
+  const credits = transactions.filter(transaction => transaction.type === 'credit');
+  const debits = transactions.filter(transaction => transaction.type === 'debit');
+  const creditTotal = credits.reduce(
+    (total, transaction) =>
+    // avoid float precision issues
+      total.add(transaction.amount)
+    , currency(0),
+  );
+  const debitTotal = debits.reduce(
+    (total, transaction) =>
+    // avoid float precision issues
+      total.add(transaction.amount)
+    , currency(0),
+  );
+  const total = currency(creditTotal).add(debitTotal);
+  const isSaver = total.value > 0;
+
+  return {
+    creditTotal: creditTotal.value,
+    debitTotal: debitTotal.value,
+    total: total.value,
+    isSaver,
+  };
 };
