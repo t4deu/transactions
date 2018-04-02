@@ -16,7 +16,7 @@ type Props = {
 };
 
 export default class ListItem extends PureComponent<Props> {
-  renderTime(transaction:Transaction) {
+  renderTime(transaction: Transaction) {
     return (
       <View style={styles.timeWrapper}>
         <Text style={styles.time}>{transaction.createdAt}</Text>
@@ -24,28 +24,29 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderDetails(transaction:Transaction) {
+  renderDetails(transaction: Transaction) {
     const detailStyle = this.props.last ? styles.lastDetail : styles.defaultDetail;
 
     return (
       <View style={[styles.details, detailStyle]}>
         <View style={styles.detail}>{this.renderDescription(transaction)}</View>
-        { !this.props.last && <View style={styles.separator} /> }
+        {!this.props.last && <View style={styles.separator} />}
       </View>
     );
   }
 
-  renderDescription(transaction:Transaction) {
+  renderDescription(transaction: Transaction) {
     return (
       <View>
         {this.renderHeader(transaction)}
         <Text style={styles.description}>{transaction.description}</Text>
-        <Text style={styles.price}>{toCurrency(transaction.amount)}</Text>
+        <Text style={styles.price}>Valor: {toCurrency(transaction.amount)}</Text>
+        <Text style={styles.price}>Sub Total: {toCurrency(transaction.subtotal)}</Text>
       </View>
     );
   }
 
-  renderHeader(transaction:Transaction) {
+  renderHeader(transaction: Transaction) {
     const title = transaction.type === 'credit' ? 'Crédito' : 'Débito';
     return (
       <View style={styles.header}>
@@ -57,7 +58,7 @@ export default class ListItem extends PureComponent<Props> {
     );
   }
 
-  renderCircle(transaction:Transaction) {
+  renderCircle(transaction: Transaction) {
     return transaction.type === 'credit' ? (
       <View style={styles.circle}>
         <Ionicons name="ios-checkmark-circle" size={32} color="#9bd533" />

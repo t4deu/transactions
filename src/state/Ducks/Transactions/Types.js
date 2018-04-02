@@ -12,6 +12,7 @@ export type Transaction = {
   +id: number,
   +type: TransactionType,
   +amount: number,
+  subtotal: number,
   +description: string,
   +createdAt: DateString,
 };

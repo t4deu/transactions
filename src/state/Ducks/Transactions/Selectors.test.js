@@ -1,6 +1,6 @@
 import 'react';
 
-import { getSortedTransactions, getTransactionsStatus } from './Selectors';
+import { getSortedTransactions, getTransactionsStatus, getTransactionsTotal, getTransactionsWithSubTotal } from './Selectors';
 
 describe('Transactions Selectors', () => {
   const transactions = [
@@ -42,6 +42,39 @@ describe('Transactions Selectors', () => {
       const sorted = getSortedTransactions(transactions, 'DESC').map(item => item.id);
 
       expect(sorted).toEqual(expectedOrder);
+    });
+  });
+
+  describe('getTransactionsWithSubtotal', () => {
+    it('calculates the current transactions subtotal', () => {
+      const expectedTransactions = [
+        {
+          id: 1,
+          type: 'credit',
+          amount: 10.5,
+          subtotal: 10.5,
+          description: 'Depósito',
+          createdAt: '2018-03-20',
+        },
+        {
+          id: 3,
+          type: 'credit',
+          amount: 115.9,
+          subtotal: 126.4,
+          description: 'Depósito',
+          createdAt: '10:00',
+        },
+        {
+          id: 4,
+          type: 'debit',
+          amount: -13.1,
+          subtotal: 113.3,
+          description: 'Mercado',
+          createdAt: '09:30',
+        },
+      ];
+
+      expect(getTransactionsWithSubTotal(transactions)).toEqual(expectedTransactions);
     });
   });
 

@@ -17,20 +17,34 @@ export const getSortedTransactions = (
   }
 };
 
+export const getTransactionsWithSubTotal = (transactions: Transactions): Transactions => {
+  return transactions.map((transaction) => {
+    const subtotal = transactions
+      .filter(item => transaction.id >= item.id)
+      .map(item => item.amount)
+      .reduce((total, current) => currency(total).value + currency(current).value, currency(0));
+
+    return {
+      ...transaction,
+      subtotal,
+    };
+  }).sort((a, b) => a.id - b.id);
+};
+
 export const getTransactionsStatus = (transactions: Transactions): Status => {
   const credits = transactions.filter(transaction => transaction.type === 'credit');
   const debits = transactions.filter(transaction => transaction.type === 'debit');
   const creditTotal = credits.reduce(
     (total, transaction) =>
-    // avoid float precision issues
-      total.add(transaction.amount)
-    , currency(0),
+      // avoid float precision issues
+      total.add(transaction.amount),
+    currency(0),
   );
   const debitTotal = debits.reduce(
     (total, transaction) =>
-    // avoid float precision issues
-      total.add(transaction.amount)
-    , currency(0),
+      // avoid float precision issues
+      total.add(transaction.amount),
+    currency(0),
   );
   const total = currency(creditTotal).add(debitTotal);
   const isSaver = total.value > 0;

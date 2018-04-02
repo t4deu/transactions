@@ -18,6 +18,7 @@ import { addTransaction, setSortOrder } from '../../state/Ducks/Transactions/Act
 import {
   getSortedTransactions,
   getTransactionsStatus,
+  getTransactionsWithSubTotal,
 } from '../../state/Ducks/Transactions/Selectors';
 // containers & components
 import Controls from '../../components/Controls/Controls';
@@ -136,7 +137,7 @@ export class Transactions extends Component<Props, State> {
 const stateToProps = (state) => {
   const { transactions, sortOrder } = state.transactionsState;
   return {
-    transactions: getSortedTransactions(transactions, sortOrder),
+    transactions: getSortedTransactions(getTransactionsWithSubTotal(transactions), sortOrder),
     hasTransactions: transactions.length > 0,
     currentStatus: getTransactionsStatus(transactions),
     sortOrder,

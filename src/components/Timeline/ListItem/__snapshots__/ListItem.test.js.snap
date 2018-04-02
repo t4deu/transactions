@@ -102,7 +102,21 @@ exports[`<ListItem> renders without issues 1`] = `
             }
           }
         >
+          Valor: 
           R$ 10,00
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontSize": 18,
+            }
+          }
+        >
+          Sub Total: 
+          R$ 0,00
         </Text>
       </View>
     </View>
